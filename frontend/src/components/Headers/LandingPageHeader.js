@@ -49,7 +49,7 @@ function LandingPageHeader() {
                 href="#pablo"
                 onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-twitter"></i>
+                <i className="fab fa-github"></i>
               </Button>
               <Button
                 className="btn-icon btn-round"

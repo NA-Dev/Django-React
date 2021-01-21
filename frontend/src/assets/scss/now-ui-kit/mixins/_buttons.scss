@@ -132,6 +132,9 @@
 
     } @else {
         color: $white-color;
+        &:not([href]):not([tabindex]) {
+            color: $white-color;
+        }
     }
 
     &.btn-simple{

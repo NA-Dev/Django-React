@@ -2,6 +2,7 @@ import React from "react";
 
 // reactstrap components
 import { Container } from "reactstrap";
+import {resumeData} from "../../resume-data";
 
 // core components
 
@@ -30,30 +31,16 @@ function ProfilePageHeader() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/bg5.jpg") + ")",
+            backgroundImage: "url(" + require("assets/img/bama.jpg") + ")",
           }}
           ref={pageHeader}
         ></div>
         <Container>
           <div className="photo-container">
-            <img alt="..." src={require("assets/img/ryan.jpg")}></img>
+            <img alt="..." src={require("assets/img/headshot.jpg")}></img>
           </div>
-          <h3 className="title">Ryan Scheinder</h3>
-          <p className="category">Photographer</p>
-          <div className="content">
-            <div className="social-description">
-              <h2>26</h2>
-              <p>Comments</p>
-            </div>
-            <div className="social-description">
-              <h2>26</h2>
-              <p>Comments</p>
-            </div>
-            <div className="social-description">
-              <h2>48</h2>
-              <p>Bookmarks</p>
-            </div>
-          </div>
+          <h3 className="title">{resumeData.main.name}</h3>
+          <p className="category">{resumeData.main.occupation}</p>
         </Container>
       </div>
     </>

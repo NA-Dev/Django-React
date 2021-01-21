@@ -42,7 +42,7 @@
 		"../scss/now-ui-kit/cards/_card-plain.scss",
 		"../scss/now-ui-kit/cards/_card-signup.scss",
 		"../scss/now-ui-kit/_example-pages.scss",
-		"../scss/now-ui-kit/_sections.scss",
+		"../scss/now-ui-kit/_.scss",
 		"../scss/now-ui-kit/_responsive.scss",
 		"../scss/react/react-differences.scss",
 		"../scss/react/plugins/_plugin-nouislider.scss",

@@ -20,6 +20,14 @@ python manage.py runserver
 
 ```
 
+### Deploy frontend for dev
+```bash
+cd frontend
+unset HOST
+nvm use 12
+npm start
+````
+
 ## Sources
 
 Frontend UI Kit:  

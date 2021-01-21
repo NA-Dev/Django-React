@@ -455,7 +455,8 @@
 }
 
 .brand .n-logo {
-  max-width: 100px;
+  /*max-width: 100px;*/
+  max-width: 160px;
   margin-bottom: 40px;
 }
 

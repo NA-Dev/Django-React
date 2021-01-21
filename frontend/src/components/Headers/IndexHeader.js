@@ -1,8 +1,11 @@
 /*eslint-disable*/
 import React from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 // reactstrap components
-import { Container } from "reactstrap";
+import {Button, Container} from "reactstrap";
+import {resumeData} from "../../resume-data";
+
 // core components
 
 function IndexHeader() {
@@ -37,32 +40,27 @@ function IndexHeader() {
             <img
               alt="..."
               className="n-logo"
-              src={require("assets/img/now-logo.png")}
+              src={require("assets/img/logo.png")}
             ></img>
-            <h1 className="h1-seo">Now UI Kit.</h1>
-            <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3>
+            <h1 className="h1-seo">{resumeData.main.name}</h1>
+            <h3>{resumeData.main.occupation}</h3>
+            <h5>{resumeData.main.description}</h5>
           </div>
           <h6 className="category category-absolute">
-            Designed by{" "}
-            <a href="http://invisionapp.com/?ref=creativetim" target="_blank">
-              <img
-                alt="..."
-                className="invision-logo"
-                src={require("assets/img/invision-white-slim.png")}
-              ></img>
-            </a>
-            . Coded by{" "}
-            <a
-              href="https://www.creative-tim.com?ref=nukr-index-header"
-              target="_blank"
-            >
-              <img
-                alt="..."
-                className="creative-tim-logo"
-                src={require("assets/img/creative-tim-white-slim2.png")}
-              ></img>
-            </a>
-            .
+            <div className="nav-align-center">
+              <Button
+                className="btn-round"
+                color="info"
+                size="lg"
+                to="about"
+                smooth={true}
+                offset={-62}
+                duration={500}
+                tag={Link}
+              >
+                Learn More
+              </Button>
+            </div>
           </h6>
         </Container>
       </div>

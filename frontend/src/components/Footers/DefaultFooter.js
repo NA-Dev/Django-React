@@ -2,7 +2,8 @@
 import React from "react";
 
 // reactstrap components
-import { Container } from "reactstrap";
+import {Button, CardHeader, CardTitle, Container, Nav, NavItem, NavLink} from "reactstrap";
+import {resumeData} from "../../resume-data";
 
 // core components
 
@@ -12,42 +13,24 @@ function DefaultFooter() {
       <footer className="footer footer-default">
         <Container>
           <nav>
-            <ul>
-              <li>
-                <a
-                  href="https://www.creative-tim.com?ref=nukr-default-footer"
-                  target="_blank"
-                >
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a
-                  href="http://presentation.creative-tim.com?ref=nukr-default-footer"
-                  target="_blank"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="http://blog.creative-tim.com?ref=nukr-default-footer"
-                  target="_blank"
-                >
-                  Blog
-                </a>
-              </li>
-            </ul>
+            <div className="social-line">
+              {resumeData.main.social.map(function (social) {
+                return ( 
+                  <Button
+                    className="btn-neutral btn-icon btn-round mt-0 mb-0"
+                    color={social.name.toLowerCase()}
+                    href={social.url}
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className={social.className}></i>
+                  </Button>
+                )
+              })}
+            </div>
           </nav>
           <div className="copyright" id="copyright">
-            © {new Date().getFullYear()}, Designed by{" "}
-            <a
-              href="https://www.invisionapp.com?ref=nukr-default-footer"
-              target="_blank"
-            >
-              Invision
-            </a>
-            . Coded by{" "}
+            © {new Date().getFullYear()}, {resumeData.main.name}<br/>
+            Template by{" "}
             <a
               href="https://www.creative-tim.com?ref=nukr-default-footer"
               target="_blank"

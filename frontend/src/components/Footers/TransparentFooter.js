@@ -3,6 +3,7 @@ import React from "react";
 
 // reactstrap components
 import { Container } from "reactstrap";
+import {resumeData} from "../../resume-data";
 
 function TransparentFooter() {
   return (
@@ -12,46 +13,36 @@ function TransparentFooter() {
           <ul>
             <li>
               <a
-                href="https://www.creative-tim.com?ref=nukr-transparent-footer"
-                target="_blank"
+                href="/"
               >
-                Creative Tim
+                Home
               </a>
             </li>
             <li>
               <a
-                href="http://presentation.creative-tim.com?ref=nukr-transparent-footer"
-                target="_blank"
+                href="/about"
               >
-                About Us
+                About
               </a>
             </li>
             <li>
               <a
-                href="http://blog.creative-tim.com?ref=nukr-transparent-footer"
-                target="_blank"
+                href="/portfolio"
               >
-                Blog
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a
+                href="/resume"
+              >
+                Resume
               </a>
             </li>
           </ul>
         </nav>
         <div className="copyright" id="copyright">
-          © {new Date().getFullYear()}, Designed by{" "}
-          <a
-            href="https://www.invisionapp.com?ref=nukr-transparent-footer"
-            target="_blank"
-          >
-            Invision
-          </a>
-          . Coded by{" "}
-          <a
-            href="https://www.creative-tim.com?ref=nukr-transparent-footer"
-            target="_blank"
-          >
-            Creative Tim
-          </a>
-          .
+          © {new Date().getFullYear()}, {resumeData.main.name}. Template by <a href="https://www.creative-tim.com" target="_blank">CreativeTim</a>
         </div>
       </Container>
     </footer>
